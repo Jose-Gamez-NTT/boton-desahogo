@@ -65,8 +65,10 @@ class ServerTests(unittest.TestCase):
         return self.request('POST', '/api/venting', json.dumps(data).encode('utf-8'), headers)
 
     def test_pages_and_initial_state(self):
-        for path in ('/', '/app.js', '/styles.css'):
+        for path in ('/', '/app.js', '/styles.css', '/iconosAplicaciones/axet.png'):
             self.assertEqual(self.request('GET', path)[0], 200)
+        status, icon = self.request('GET', '/iconosAplicaciones/axet.png')
+        self.assertEqual(icon, (app.ROOT / 'iconosAplicaciones' / 'axet.png').read_bytes())
         status, body = self.request('GET', '/api/state')
         self.assertEqual(status, 200)
         applications = json.loads(body)['applications']

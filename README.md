@@ -14,7 +14,7 @@ Se abrirá el navegador automáticamente. Mantén la ventana de la aplicación a
 
 ## Cómo funciona
 
-Escribe tu desahogo y pulsa **Soltar desahogo**. El primer aplicativo es aXet.code, con un icono provisional. El termómetro muestra la actividad, no la disponibilidad real del sistema:
+Escribe tu desahogo y pulsa **Soltar desahogo**. El primer aplicativo es aXet.code y su icono se encuentra en `iconosAplicaciones/axet.png`. El termómetro muestra la actividad, no la disponibilidad real del sistema:
 
 - Verde: 0 desahogos activos.
 - Amarillo: 1–2.
