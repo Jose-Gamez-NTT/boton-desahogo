@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ed">
+  <title>Botón de desahogo</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Botón de desahogo, inicio"><span class="brand-mark" aria-hidden="true">✳</span><span>botón <span class="brand-light">de</span> desahogo<span class="brand-dot">.</span></span></a>
+      <span class="local-badge"><span class="local-dot"></span> TU ESPACIO LOCAL</span>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-line"></span> UN RESPIRO PARA TU DÍA</div>
+          <h1>Suéltalo.<br><span>Respira.</span> Sigue.</h1>
+          <p>Porque a veces la tecnología desespera. Este es tu espacio para soltarlo y seguir adelante.</p>
+        </div>
+        <div class="hero-illustration" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="face"><span class="face-eye left"></span><span class="face-eye right"></span><span class="face-mouth"></span></div><span class="sparkle sparkle-one">✳</span><span class="sparkle sparkle-two">✦</span><span class="sparkle sparkle-three">✧</span></div>
+      </section>
+
+      <div class="workspace">
+        <section class="compose-card" aria-labelledby="compose-title">
+          <div class="section-heading"><span class="step">01</span><div><p class="section-kicker">TU MOMENTO</p><h2 id="compose-title">¿Qué está pasando?</h2></div></div>
+          <p class="section-intro">Elige el aplicativo y cuéntanos qué te tiene así.</p>
+          <form id="vent-form">
+            <label for="application">APLICATIVO</label>
+            <div class="select-wrap"><select id="application" name="application" required disabled><option>Cargando aplicativos...</option></select></div>
+            <label for="message">TU DESAHOGO <span>SIN FILTROS, SIN JUICIOS</span></label>
+            <div class="textarea-wrap"><textarea id="message" name="message" maxlength="2000" placeholder="Ese momento en el que nada funciona como debería..." required></textarea><div class="textarea-footer"><span>Escribe lo que necesites.</span><span id="char-count">0 / 2000</span></div></div>
+            <button id="submit-button" type="submit" disabled><span>Soltar desahogo</span><span aria-hidden="true">↗</span></button>
+            <p id="form-feedback" class="feedback" role="status" aria-live="polite"></p>
+          </form>
+          <div class="privacy-note"><span aria-hidden="true">⌂</span> Solo para ti. Todo se guarda en este equipo.</div>
+        </section>
+
+        <aside class="status-column">
+          <section class="status-card" aria-labelledby="status-title">
+            <div class="section-heading"><span class="step">02</span><div><p class="section-kicker">EL TERMÓMETRO</p><h2 id="status-title">¿Cómo está la cosa?</h2></div></div>
+            <p class="section-intro">Un vistazo al ambiente de tus aplicativos.</p>
+            <div id="application-status" aria-live="polite"><p class="loading">Cargando estado...</p></div>
+            <div class="status-explainer"><span aria-hidden="true">◷</span><p>Con el tiempo todo se calma. Se resta un desahogo activo cada hora.</p></div>
+          </section>
+          <section class="breathe-card"><div><p>RECUERDA</p><h3>Esto también<br>pasará.</h3><span>Un problema a la vez.</span></div><div class="breathe-art" aria-hidden="true">✳</div></section>
+        </aside>
+      </div>
+
+      <section class="history-section" aria-labelledby="history-title">
+        <div class="history-heading"><div><p class="section-kicker">MIRANDO ATRÁS</p><h2 id="history-title">Tus últimos desahogos<span class="brand-dot">.</span></h2><p>Todo lo que ya has dejado ir.</p></div><span id="history-count" class="history-count">0 EN TOTAL</span></div>
+        <div id="history" class="history-list"><p class="loading">Cargando historial...</p></div>
+      </section>
+    </main>
+    <footer><span>HECHO PARA SOLTAR, NO PARA GUARDAR RENCOR.</span><span>UN RESPIRO A LA VEZ <span class="footer-star">✳</span></span></footer>
+  </div>
+</body>
+</html>
